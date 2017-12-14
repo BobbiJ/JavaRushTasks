@@ -4,6 +4,13 @@ import com.javarush.task.task26.task2613.exception.NotEnoughMoneyException;
 
 import java.util.*;
 
+
+/**
+ * Created by Maxim Taxants 14/12/2017
+ */
+
+
+
 public class CurrencyManipulator {
     private String currencyCode;
     private Map<Integer, Integer> denominations;

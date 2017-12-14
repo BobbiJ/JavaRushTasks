@@ -5,12 +5,18 @@ import com.javarush.task.task26.task2613.exception.InterruptOperationException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ResourceBundle;
+
+
+
+/**
+ * Created by Maxim Taxants 14/12/2017
+ */
 
 public class ConsoleHelper {
 
-
-        private static BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
-
+    private static ResourceBundle res = ResourceBundle.getBundle(CashMachine.class.getPackage().getName()+".resources.common_en");
+    private static BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
     public static void  writeMessage(String message){
         System.out.println(message);
     }
@@ -24,10 +30,7 @@ public class ConsoleHelper {
             if (input.equalsIgnoreCase("exit")) {
                 throw new InterruptOperationException();
             }
-
-        } catch (IOException ignored) {}
-
-
+        } catch (IOException e) {}
 
         return input;
 
@@ -35,7 +38,7 @@ public class ConsoleHelper {
 
 
     public static String askCurrencyCode() throws InterruptOperationException {
-        writeMessage("Enter the currency code");
+        writeMessage(res.getString("choose.currency.code"));
         while (true) {
             String s1 = null;
                 s1 = readString();
@@ -45,7 +48,7 @@ public class ConsoleHelper {
     }
 
     public static String[] getValidTwoDigits(String currencyCode) throws InterruptOperationException {
-        writeMessage("Input nominal and total:");
+        writeMessage(res.getString("choose.denomination.and.count.format"));
         String[] input;
         while (true) {
             input = readString().split(" ");
@@ -80,6 +83,10 @@ public class ConsoleHelper {
             } catch (Exception e){
                 throw new InterruptOperationException();
             }
+    }
+
+    public static void printExitMessage (){
+        ConsoleHelper.writeMessage("Bye");
     }
 
 }
