@@ -4,11 +4,6 @@ import com.javarush.task.task28.task2810.vo.Vacancy;
 
 import java.util.List;
 
-
-
-/**
- Created by Maxim Taxants 12.12.2017
- */
 public class Provider {
    private Strategy strategy;
 

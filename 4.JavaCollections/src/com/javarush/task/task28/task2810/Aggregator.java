@@ -6,11 +6,6 @@ import com.javarush.task.task28.task2810.model.MoikrugStrategy;
 import com.javarush.task.task28.task2810.model.Provider;
 import com.javarush.task.task28.task2810.view.HtmlView;
 
-/**
-Created by Maxim Taxants 12.12.2017
-*/
-
-
 
 public class Aggregator {
     public static void main(String[] args) {

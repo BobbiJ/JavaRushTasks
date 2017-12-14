@@ -11,10 +11,6 @@ import java.io.*;
 
 import java.util.List;
 
-
-/**
- Created by Maxim Taxants 12.12.2017
- */
 public class HtmlView implements View {
    private Controller controller;
     private final String filePath = "./4.JavaCollections/src/" + this.getClass().getPackage().getName().replace('.', '/') + "/vacancies.html";

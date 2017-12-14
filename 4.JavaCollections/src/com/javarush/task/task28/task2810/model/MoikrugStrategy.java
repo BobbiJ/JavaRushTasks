@@ -10,10 +10,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- Created by Maxim Taxants 12.12.2017
- */
 public class MoikrugStrategy implements Strategy {
     @Override
     public List<Vacancy> getVacancies(String searchString) {
