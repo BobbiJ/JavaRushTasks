@@ -1,6 +1,5 @@
 package com.javarush.task.task21.task2113;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,6 +16,7 @@ public class Hippodrome {
         game = new Hippodrome(Arrays.asList(new Horse ("Elena", 3,0),
                 new Horse ("Hurricane", 3,0),
                 new Horse("Lightning", 3,0)));
+
         game.run();
         game.printWinner();
     }
